@@ -13,7 +13,7 @@ public class Application {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(new Class[]{AppConfig.class});
 
         for(int i = 0; i < 5; ++i) {
-            AnimalsCage bean = (AnimalsCage)applicationContext.getBean(AnimalsCage.class);
+            AnimalsCage bean = applicationContext.getBean(AnimalsCage.class);
             bean.whatAnimalSay();
         }
 
